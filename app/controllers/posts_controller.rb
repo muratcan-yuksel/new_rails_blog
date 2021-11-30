@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
-# do certain things only after authentication
-  before_action :authenticate_admin!, except: [:index, :show]
+  # do certain things only after authentication
+
+  # before_action :authenticate_auth!, except: [:index, :show]
 
 
   # GET /posts or /posts.json
