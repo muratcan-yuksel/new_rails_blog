@@ -5,9 +5,9 @@
 <img src=<%= post.image_url %> alt="">
 <p><%= markdown(post.content) %></p>
   <%if admin_signed_in? %>
-        <%= link_to 'Show', post, class:"btn btn-info" %>
-         <%= link_to 'Edit', edit_post_path(post), class:"btn btn-warning"  %> 
-         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-danger"  %> 
+        <%= link_to 'Göster', post, class:"btn btn-info" %>
+         <%= link_to 'Düzenle', edit_post_path(post), class:"btn btn-warning"  %> 
+         <%= link_to 'Sil', post, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-danger"  %> 
        <% end %>
     <% end %>
 
@@ -16,5 +16,5 @@
 <br>
      <%if admin_signed_in? %>
 
-<%= link_to 'New Post', new_post_path , class:"btn btn-success" %>
+<%= link_to 'Yeni Post', new_post_path , class:"btn btn-success" %>
        <% end %>
