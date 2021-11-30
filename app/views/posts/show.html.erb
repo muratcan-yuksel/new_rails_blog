@@ -1,30 +1,17 @@
 
-<p>
-  <strong>Title:</strong>
+<h2>
   <%= @post.title %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @post.category %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @post.author %>
-</p>
+</h2>
+<img src=<%= @post.image_url %> alt="">
 
 <p>
   <strong>Content:</strong>
   <%= @post.content %>
 </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @post.image_url %>
-</p>
+
 
  <%if admin_signed_in? %>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post) , class:"btn btn-warning" %> 
+<%= link_to 'Back', posts_path, class:"btn btn-secondary"  %>
   <%end%>
